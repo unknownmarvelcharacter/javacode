@@ -1,0 +1,26 @@
+// LCA 3.3 - Linear Search in Array
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int a[] = {10, 20, 30, 40, 50};
+        int key = 30;
+        int found = 0;
+
+        for(int i = 0; i < a.length; i++)
+        {
+            if(a[i] == key)
+            {
+                System.out.println("Element found at position: " + (i + 1));
+                found = 1;
+                break;
+            }
+        }
+
+        if(found == 0)
+        {
+            System.out.println("Element not found");
+        }
+    }
+}
