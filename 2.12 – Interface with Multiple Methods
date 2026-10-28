@@ -10,12 +10,12 @@ class Demo implements Student
 {
     public void name()
     {
-        System.out.println("Name: Nishad");
+        System.out.println("Name: test");
     }
 
     public void roll()
     {
-        System.out.println("Roll No: 41");
+        System.out.println("Roll No: 1");
     }
 }
 
