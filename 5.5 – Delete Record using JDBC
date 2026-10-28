@@ -1,0 +1,34 @@
+// Unit 5.5 - Delete Record using JDBC
+
+import java.sql.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/college",
+                "root",
+                "password"
+            );
+
+            String sql = "DELETE FROM student WHERE roll_no = ?";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setInt(1, 2);
+
+            int rows = ps.executeUpdate();
+
+            System.out.println(rows + " Record Deleted");
+
+            con.close();
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
