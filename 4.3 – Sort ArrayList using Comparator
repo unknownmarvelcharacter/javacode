@@ -1,0 +1,29 @@
+// Unit 4.3 - Sort ArrayList using Comparator
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        list.add(50);
+        list.add(20);
+        list.add(40);
+        list.add(10);
+        list.add(30);
+
+        Collections.sort(list, new Comparator<Integer>()
+        {
+            public int compare(Integer a, Integer b)
+            {
+                return a.compareTo(b);
+            }
+        });
+
+        System.out.println("Sorted List: " + list);
+    }
+}
