@@ -1,0 +1,23 @@
+// Unit 4.2 - Demonstrate HashMap
+
+import java.util.HashMap;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        HashMap<Integer, String> map = new HashMap<>();
+
+        map.put(1, "Nishad");
+        map.put(2, "Rahul");
+        map.put(3, "Amit");
+
+        System.out.println("HashMap: " + map);
+
+        System.out.println("Student: " + map.get(1));
+
+        map.remove(2);
+
+        System.out.println("Updated HashMap: " + map);
+    }
+}
