@@ -1,0 +1,17 @@
+// Experiment 13.4 - Date Formatting using DateTimeFormatter
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        LocalDate d = LocalDate.of(2026, 10, 28);
+
+        DateTimeFormatter f =
+            DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        System.out.println(d.format(f));
+    }
+}
