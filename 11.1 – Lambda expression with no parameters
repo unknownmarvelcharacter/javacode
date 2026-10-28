@@ -1,0 +1,16 @@
+// Experiment 11.1 - Lambda Expression with No Parameters
+
+interface Message
+{
+    void display();
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Message m = () -> System.out.println("Hello Java");
+
+        m.display();
+    }
+}
