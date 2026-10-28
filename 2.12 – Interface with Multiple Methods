@@ -1,0 +1,31 @@
+// LCA 2.12 - Interface with Multiple Methods
+
+interface Student
+{
+    void name();
+    void roll();
+}
+
+class Demo implements Student
+{
+    public void name()
+    {
+        System.out.println("Name: Nishad");
+    }
+
+    public void roll()
+    {
+        System.out.println("Roll No: 41");
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Demo d = new Demo();
+
+        d.name();
+        d.roll();
+    }
+}
