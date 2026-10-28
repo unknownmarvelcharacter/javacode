@@ -1,0 +1,16 @@
+// Experiment 13.1 - Java Date API
+
+import java.time.LocalDate;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        LocalDate d = LocalDate.now();
+
+        System.out.println("Current Date: " + d);
+        System.out.println("Year: " + d.getYear());
+        System.out.println("Month: " + d.getMonth());
+        System.out.println("Day: " + d.getDayOfMonth());
+    }
+}
