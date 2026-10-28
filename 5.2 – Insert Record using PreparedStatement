@@ -1,0 +1,36 @@
+// Unit 5.2 - Insert Record using PreparedStatement
+
+import java.sql.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/college",
+                "root",
+                "password"
+            );
+
+            String sql = "INSERT INTO student VALUES (?, ?, ?)";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setInt(1, 4);
+            ps.setString(2, "Karan");
+            ps.setDouble(3, 80);
+
+            ps.executeUpdate();
+
+            System.out.println("Record Inserted Successfully");
+
+            con.close();
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
