@@ -1,0 +1,26 @@
+// Experiment 15.1 - Set Interface using HashSet
+
+import java.util.HashSet;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        HashSet<String> s = new HashSet<>();
+
+        s.add("Java");
+        s.add("Python");
+        s.add("C++");
+        s.add("Java");
+
+        System.out.println("Set: " + s);
+
+        System.out.println("Size: " + s.size());
+
+        System.out.println("Contains Java: " + s.contains("Java"));
+
+        s.remove("C++");
+
+        System.out.println("After Removal: " + s);
+    }
+}
