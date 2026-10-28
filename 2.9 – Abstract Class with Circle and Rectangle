@@ -1,0 +1,37 @@
+// LCA 2.9 - Abstract Class with Circle and Rectangle
+
+abstract class Shape
+{
+    abstract void area();
+}
+
+class Circle extends Shape
+{
+    void area()
+    {
+        int r = 5;
+        System.out.println("Circle Area: " + (3.14 * r * r));
+    }
+}
+
+class Rectangle extends Shape
+{
+    void area()
+    {
+        int l = 10;
+        int b = 5;
+        System.out.println("Rectangle Area: " + (l * b));
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Circle c = new Circle();
+        Rectangle r = new Rectangle();
+
+        c.area();
+        r.area();
+    }
+}
