@@ -1,0 +1,15 @@
+// Experiment 13.2 - Java Time API
+
+import java.time.LocalTime;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        LocalTime t = LocalTime.now();
+
+        System.out.println("Current Time: " + t);
+        System.out.println("Hour: " + t.getHour());
+        System.out.println("Minute: " + t.getMinute());
+    }
+}
