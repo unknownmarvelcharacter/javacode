@@ -9,6 +9,6 @@ public class Main
         Consumer<String> c = name ->
             System.out.println("Hello " + name);
 
-        c.accept("Nishad");
+        c.accept("test");
     }
 }
