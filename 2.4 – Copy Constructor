@@ -1,0 +1,36 @@
+// LCA 2.4 - Demonstrate Copy Constructor
+
+class Student
+{
+    int roll;
+    String name;
+
+    Student(int r, String n)
+    {
+        roll = r;
+        name = n;
+    }
+
+    Student(Student s)
+    {
+        roll = s.roll;
+        name = s.name;
+    }
+
+    void display()
+    {
+        System.out.println(roll + " " + name);
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Student s1 = new Student(1, "test");
+        Student s2 = new Student(s1);
+
+        s1.display();
+        s2.display();
+    }
+}
