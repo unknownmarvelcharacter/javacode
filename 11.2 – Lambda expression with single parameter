@@ -1,0 +1,16 @@
+// Experiment 11.2 - Lambda Expression with Single Parameter
+
+interface Square
+{
+    void calculate(int n);
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Square s = n -> System.out.println("Square: " + (n * n));
+
+        s.calculate(5);
+    }
+}
