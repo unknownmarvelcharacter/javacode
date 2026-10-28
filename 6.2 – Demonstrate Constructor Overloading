@@ -1,0 +1,29 @@
+// LCA 6.2 - Demonstrate Constructor Overloading
+
+class Student
+{
+    Student()
+    {
+        System.out.println("Default Constructor");
+    }
+
+    Student(int a)
+    {
+        System.out.println("Value: " + a);
+    }
+
+    Student(int a, int b)
+    {
+        System.out.println("Sum: " + (a + b));
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Student s1 = new Student();
+        Student s2 = new Student(10);
+        Student s3 = new Student(10, 20);
+    }
+}
