@@ -1,0 +1,26 @@
+// Unit 3.2 - Thread Priority
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Thread t1 = new Thread(() ->
+        {
+            System.out.println("Low Priority Thread");
+        });
+
+        Thread t2 = new Thread(() ->
+        {
+            System.out.println("High Priority Thread");
+        });
+
+        t1.setPriority(1);
+        t2.setPriority(10);
+
+        System.out.println("Thread 1 Priority: " + t1.getPriority());
+        System.out.println("Thread 2 Priority: " + t2.getPriority());
+
+        t1.start();
+        t2.start();
+    }
+}
