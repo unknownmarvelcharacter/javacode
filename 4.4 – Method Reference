@@ -1,0 +1,24 @@
+// Unit 4.4 - Demonstrate Method Reference
+
+interface Message
+{
+    void display();
+}
+
+class Demo
+{
+    static void show()
+    {
+        System.out.println("Hello Java");
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Message m = Demo::show;
+
+        m.display();
+    }
+}
