@@ -1,0 +1,39 @@
+// Experiment 7.3 - Multithreading: Print 10 to 20 and 20 to 1
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Thread t2 = new Thread(() ->
+        {
+            for(int i = 20; i >= 1; i--)
+            {
+                System.out.println("Second: " + i);
+            }
+        });
+
+        Thread t1 = new Thread(() ->
+        {
+            for(int i = 10; i <= 20; i++)
+            {
+                System.out.println("First: " + i);
+
+                if(i == 11)
+                {
+                    t2.start();
+
+                    try
+                    {
+                        Thread.sleep(100);
+                    }
+                    catch(InterruptedException e)
+                    {
+                        System.out.println(e);
+                    }
+                }
+            }
+        });
+
+        t1.start();
+    }
+}
