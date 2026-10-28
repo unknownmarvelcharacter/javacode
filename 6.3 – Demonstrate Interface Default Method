@@ -1,0 +1,22 @@
+// LCA 6.3 - Interface Default Method
+
+interface Demo
+{
+    default void display()
+    {
+        System.out.println("Default Method");
+    }
+}
+
+class Test implements Demo
+{
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Test t = new Test();
+        t.display();
+    }
+}
