@@ -1,0 +1,16 @@
+// Experiment 11.3 - Lambda Expression with Multiple Parameters
+
+interface Addition
+{
+    int add(int a, int b);
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Addition a = (x, y) -> x + y;
+
+        System.out.println("Sum: " + a.add(10, 20));
+    }
+}
