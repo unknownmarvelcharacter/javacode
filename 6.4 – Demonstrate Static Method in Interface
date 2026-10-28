@@ -1,0 +1,17 @@
+// LCA 6.4 - Static Method in Interface
+
+interface Demo
+{
+    static void show()
+    {
+        System.out.println("Static Interface Method");
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Demo.show();
+    }
+}
