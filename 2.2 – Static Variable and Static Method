@@ -1,0 +1,19 @@
+// LCA 2.2 - Static Variable and Static Method
+
+class Student
+{
+    static String college = "MIT WPU";
+
+    static void display()
+    {
+        System.out.println("College: " + college);
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Student.display();
+    }
+}
