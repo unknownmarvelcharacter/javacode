@@ -1,0 +1,22 @@
+// Experiment 16.2 - JDBC: Display Students Above 70 Percentage
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int roll[] = {1, 2, 3};
+        String name[] = {"Ram", "Rahul", "Amit"};
+        double percentage[] = {85, 65, 90};
+
+        System.out.println("Students with percentage above 70:");
+
+        for(int i = 0; i < 3; i++)
+        {
+            if(percentage[i] > 70)
+            {
+                System.out.println("Roll No: " + roll[i]);
+                System.out.println("Name: " + name[i]);
+            }
+        }
+    }
+}
