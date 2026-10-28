@@ -5,7 +5,7 @@ public class Main
     public static void main(String[] args)
     {
         int roll[] = {1, 2, 3};
-        String name[] = {"Nishad", "Rahul", "Amit"};
+        String name[] = {"Ram", "Rahul", "Amit"};
         double percentage[] = {85, 65, 90};
 
         System.out.println("Student Table Created");
