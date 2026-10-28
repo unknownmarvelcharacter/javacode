@@ -1,0 +1,27 @@
+// Unit 3.1 - Thread Lifecycle
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Thread t = new Thread(() ->
+        {
+            System.out.println("Thread Running");
+        });
+
+        System.out.println("State: " + t.getState());
+
+        t.start();
+
+        try
+        {
+            t.join();
+        }
+        catch(InterruptedException e)
+        {
+            System.out.println(e);
+        }
+
+        System.out.println("State: " + t.getState());
+    }
+}
