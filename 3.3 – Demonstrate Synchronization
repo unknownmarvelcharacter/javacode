@@ -1,0 +1,35 @@
+// Unit 3.3 - Thread Synchronization
+
+class Table
+{
+    synchronized void print(int n)
+    {
+        for(int i = 1; i <= 5; i++)
+        {
+            System.out.println(n * i);
+
+            try
+            {
+                Thread.sleep(100);
+            }
+            catch(InterruptedException e)
+            {
+                System.out.println(e);
+            }
+        }
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Table t = new Table();
+
+        Thread t1 = new Thread(() -> t.print(2));
+        Thread t2 = new Thread(() -> t.print(5));
+
+        t1.start();
+        t2.start();
+    }
+}
