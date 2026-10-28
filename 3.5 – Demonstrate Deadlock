@@ -1,0 +1,57 @@
+// Unit 3.5 - Demonstrate Deadlock
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        final Object a = new Object();
+        final Object b = new Object();
+
+        Thread t1 = new Thread(() ->
+        {
+            synchronized(a)
+            {
+                System.out.println("Thread 1 locked A");
+
+                try
+                {
+                    Thread.sleep(100);
+                }
+                catch(InterruptedException e)
+                {
+                    System.out.println(e);
+                }
+
+                synchronized(b)
+                {
+                    System.out.println("Thread 1 locked B");
+                }
+            }
+        });
+
+        Thread t2 = new Thread(() ->
+        {
+            synchronized(b)
+            {
+                System.out.println("Thread 2 locked B");
+
+                try
+                {
+                    Thread.sleep(100);
+                }
+                catch(InterruptedException e)
+                {
+                    System.out.println(e);
+                }
+
+                synchronized(a)
+                {
+                    System.out.println("Thread 2 locked A");
+                }
+            }
+        });
+
+        t1.start();
+        t2.start();
+    }
+}
