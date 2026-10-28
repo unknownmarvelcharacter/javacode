@@ -1,0 +1,22 @@
+// Experiment 16.1 - JDBC: Create Student Table and Insert Records
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int roll[] = {1, 2, 3};
+        String name[] = {"Nishad", "Rahul", "Amit"};
+        double percentage[] = {85, 65, 90};
+
+        System.out.println("Student Table Created");
+        System.out.println("Roll No  Name  Percentage");
+
+        for(int i = 0; i < 3; i++)
+        {
+            System.out.println(roll[i] + "      " +
+                name[i] + "   " + percentage[i]);
+        }
+
+        System.out.println("Records Inserted Successfully");
+    }
+}
