@@ -1,0 +1,13 @@
+// Experiment 13.3 - Java LocalDateTime API
+
+import java.time.LocalDateTime;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        LocalDateTime dt = LocalDateTime.now();
+
+        System.out.println("Date and Time: " + dt);
+    }
+}
