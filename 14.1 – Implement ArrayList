@@ -1,0 +1,27 @@
+// Experiment 14.1 - List Interface using ArrayList
+
+import java.util.ArrayList;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("Java");
+        list.add("Python");
+        list.add("C++");
+
+        System.out.println("List: " + list);
+
+        System.out.println("Element: " + list.get(1));
+
+        list.set(1, "HTML");
+
+        System.out.println("Updated List: " + list);
+
+        list.remove("C++");
+
+        System.out.println("Final List: " + list);
+    }
+}
