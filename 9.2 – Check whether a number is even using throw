@@ -1,0 +1,28 @@
+// Experiment 9.2 - Throw and Throws: Check Even Number
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int n = sc.nextInt();
+
+        try
+        {
+            if(n % 2 != 0)
+            {
+                throw new Exception("Number is not even");
+            }
+
+            System.out.println("Number is even");
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+}
