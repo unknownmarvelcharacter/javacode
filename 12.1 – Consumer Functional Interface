@@ -1,0 +1,14 @@
+// Experiment 12.1 - Consumer Functional Interface
+
+import java.util.function.Consumer;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Consumer<String> c = name ->
+            System.out.println("Hello " + name);
+
+        c.accept("Nishad");
+    }
+}
